@@ -2,6 +2,7 @@
 body{
 	font-family: 'Quicksand', sans-serif;
 	background-color: #D6D6D6;
+	margin:0;
 }
 
 #body{
@@ -20,3 +21,73 @@ body{
 	padding-top:75px;
 	width:300px;
 }
+
+.welcome{
+	text-align: center;
+}
+
+/* general purpose divs */
+.clear{
+	clear:both;
+}
+
+.left{
+	float:left;
+}
+
+
+/* CSS for the main page template used everywhere but login pages*/
+#content{
+	width:800px;
+	border-style:none solid none solid;
+	border-color:#ABABAB;
+	margin-top:0;
+	background-color:white;
+	margin-left: auto;
+	margin-right:auto;
+}
+
+#content h1{
+	text-align:center;
+	margin:0 0 50px;
+	padding-top:40px;
+}
+
+.item{
+	padding-left:40px;
+	padding-right:40px;
+	margin:20px 0 20px 0;
+}
+
+.item img{
+	margin-right:40px;
+	margin-bottom:20px;
+}
+
+.item div input{
+	margin: 0 auto 0 40px;
+}
+
+.item, .item img, .details{
+	float:left;
+}
+
+.details{
+	padding-top:10px;
+	width:470px;
+}
+
+.details p{
+	margin:0;
+	text-align: justify;
+}
+
+.details p span{
+	font-weight: bold;
+}
+
+
+
+
+
+
