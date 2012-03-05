@@ -1,0 +1,22 @@
+
+body{
+	font-family: 'Quicksand', sans-serif;
+	background-color: #D6D6D6;
+}
+
+#body{
+	margin: 100px auto auto auto;
+	width:500px;
+	height: 250px;
+	background-color:white;
+	border-style:solid;
+	border-color:#ABABAB;
+	border-radius:5px;
+}
+
+#login{
+	margin-left: auto;
+	margin-right:auto;
+	padding-top:75px;
+	width:300px;
+}
