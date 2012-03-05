@@ -26,8 +26,18 @@ The 'webadmin' user has access to this table.
 	
 	
 -----------------------------------
-|         TABLE: inventory        |
+|            Inventory            |
 -----------------------------------
+One table per department. ie. one for books, one for video games etc...
 
-create table inventory{
 	
+	create table books(
+		id SERIAL UNIQUE,
+		image VARCHAR DEFAULT 'http://static7.merchantcircle.com/static/imgs/products/noProduct_120x120.gif',
+		title CHAR(30) NOT NULL UNIQUE,
+		edition INTEGER NOT NULL,
+		price CHAR(10) NOT NULL,
+		author CHAR(30) NOT NULL,
+		description CHAR(180) DEFAULT 'The vendor has not uploaded a description'
+	);
+	grant all privileges on books,books_id_seq to webstore;	

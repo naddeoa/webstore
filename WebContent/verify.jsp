@@ -7,7 +7,7 @@
 
 	String querry = "SELECT * FROM users WHERE username='"+request.getParameter("username")+
 			"' and password='"+request.getParameter("password") + "';";
-	ResultSet rs = db.sql(querry);
+	ResultSet rs = db.sql(querry, "admin");
 	
 	rs.next();
 	int rowCount = rs.getRow();
