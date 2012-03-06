@@ -18,7 +18,7 @@
 
 
 <script type="text/JavaScript">
-setTimeout("location.href = 'index.jsp';",3000);
+setTimeout("location.href = 'index.jsp';",1500);
 </script>
 
 <html>

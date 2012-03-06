@@ -36,9 +36,16 @@
 				String p = request.getParameter("page");
 				if(p != null && p.equals("games"))
 					out.println(db.getGamesHtml("select * from games;"));
-				else if(p != null && p.equals("cart"))
-					out.println();
-				else
+				else if(p != null && p.equals("cart")){
+					String books = user.getBooksQuerry();
+					String games = user.getGamesQuerry();
+					if(books == null && games == null)
+						out.println("nothing in cart");
+					if(books != null)
+						out.println(db.getBooksHtml(books));
+					if(games != null)
+						out.println(db.getGamesHtml(games));
+				}else
 					out.println(db.getBooksHtml("select * from books;"));
 			%>
 			

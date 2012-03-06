@@ -11,12 +11,16 @@ if(book == null && game == null){
 	return;
 }
 
+
+
 if(request.getParameter("game") != null){
-	
-	
+	user.cart.games.add(Integer.parseInt(game));
+	System.out.println("adding game");
 }else if(request.getParameter("book") != null){
-	
-	
+	user.cart.books.add(Integer.parseInt(book));
+	System.out.println("adding book");
 }
+
+out.println("Added to cart");
 
 %>

@@ -99,7 +99,7 @@ public class Psql {
 				+"				<div class='clear'></div>"
 				+"				<form method='post' action='cart.jsp'>"
 				+"				<input type='text' name='book' value='"+id+"' style='display:none' />"
-				+"				<input type='button' value='add to cart'/>"
+				+"				<input type='submit' value='add to cart'/>"
 				+"				</form>"
 				+"			</div>"
 				+"			<div class='details'>"
@@ -167,7 +167,7 @@ public class Psql {
 				+"				<div class='clear'></div>"
 				+"				<form method='post' action='cart.jsp'>"
 				+"				<input type='text' name='game' value='"+id+"' style='display:none' />"
-				+"				<input type='button' value='add to cart'/>"
+				+"				<input type='submit' value='add to cart'/>"
 				+"				</form>"
 				+"			</div>"
 				+"			<div class='details'>"
@@ -196,20 +196,20 @@ public class Psql {
 	public String getGamesHtml(String query){
 		
 		ResultSet rs = sql(query, WEBSTORE);
-		String books = new String();
+		String games = new String();
 		
 		try{
 			while(rs.next()){
-				String s = genBookHtml(rs.getString("id"),
+				String s = genGameHtml(rs.getString("id"),
 						rs.getString("title"), 
 						rs.getString("studio"), 
 						rs.getString("console"), 
 						rs.getString("price"), 
 						rs.getString("description"), 
 						rs.getString("image"));
-				books += s;
+				games += s;
 			}
-			return books;
+			return games;
 		}catch(SQLException e){
 			System.out.println(e.getMessage());
 			System.exit(1);
