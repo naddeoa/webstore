@@ -7,12 +7,13 @@
 
 	String querry = "SELECT * FROM users WHERE username='"+request.getParameter("username")+
 			"' and password='"+request.getParameter("password") + "';";
-	ResultSet rs = db.sql(querry, "admin");
+	ResultSet rs = db.sql(querry, Psql.WEBADMIN);
 	
 	rs.next();
 	int rowCount = rs.getRow();
 	if( rowCount == 1 ){
 		user.setName(request.getParameter("username").toString());
+		user.setAdmin(rs.getBoolean("admin"));
 %>
 
 

@@ -21,10 +21,25 @@
 		
 		<div id="content">
 			<h1>The Webstore</h1>
+			<form method="post" action="index.jsp">
+				<select name="page">
+					<option value="books">books</option>
+					<option value="games">games</option>
+					<option value="cart">cart</option>
+				</select>
+				<input type="submit" value="Change Department"/>
+			</form>
+			
 			
 			<%
 				Psql db = new Psql();
-				out.println(db.getBooksHtml("select * from books;"));
+				String p = request.getParameter("page");
+				if(p != null && p.equals("games"))
+					out.println(db.getGamesHtml("select * from games;"));
+				else if(p != null && p.equals("cart"))
+					out.println();
+				else
+					out.println(db.getBooksHtml("select * from books;"));
 			%>
 			
 			
