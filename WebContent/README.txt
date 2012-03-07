@@ -23,6 +23,7 @@ The 'webadmin' user has access to this table.
 		password CHAR(64) NOT NULL,
 		admin BOOLEAN DEFAULT FALSE
 	);
+	create user webadmin with password 'iAmTheAdmin';
 	grant all privileges on users,users_id_seq to webadmin;
 	
 	
@@ -43,6 +44,7 @@ One table per department. ie. one for books, one for video games etc...
 		author CHAR(30) NOT NULL,
 		description CHAR(180) DEFAULT 'The vendor has not uploaded a description'
 	);
+	create user webstore with password 'store4you';
 	grant all privileges on books,books_id_seq to webstore;	
 
 
@@ -67,6 +69,7 @@ One table per department. ie. one for books, one for video games etc...
 			studio CHAR(30) NOT NULL,
 			description CHAR(180) DEFAULT 'The vendor has not uploaded a description'
 	);
+	grant all privileges on games,games_id_seq to webstore;	
 	
 	insert into books (title,edition,price,author,description,image) values(
 		'TITLE',
