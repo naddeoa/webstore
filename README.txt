@@ -25,10 +25,18 @@ Then run the setup script. This will create a database called
 |           Default info          |
 -----------------------------------
 
-user	:	webstore
+dbuser	:	webstore
 pass	:	store4you
 
-user	:	webadmin 
+dbuser	:	webadmin 
 pass	:	iAmTheAdmin
 
-database Name:	store
+db Name:	store
+
+---- within the web application (as a login name) ----
+
+user: admin
+pass: password
+
+user: user
+pass: password
